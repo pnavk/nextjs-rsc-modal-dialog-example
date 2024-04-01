@@ -26,7 +26,9 @@ export default function InfoModal() {
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogTrigger className="text-blue-500">Click Me!</DialogTrigger>
+      <DialogTrigger>
+        <Button variant="default">Open Dialog</Button>
+      </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Important information</DialogTitle>
