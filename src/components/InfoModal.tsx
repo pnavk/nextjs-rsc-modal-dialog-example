@@ -26,7 +26,7 @@ export default function InfoModal() {
 
   return (
     <Dialog open={isOpen} onOpenChange={onOpenChange}>
-      <DialogTrigger>
+      <DialogTrigger asChild>
         <Button variant="default">Open Dialog</Button>
       </DialogTrigger>
       <DialogContent>
