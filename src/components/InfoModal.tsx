@@ -22,7 +22,7 @@ export default function InfoModal() {
   const isOpen = searchParams.has(routeIdentifier);
 
   const onOpenChange = (isOpen: boolean) => {
-    isOpen ? router.push(`${pathname}?${routeIdentifier}`) : router.back();
+    isOpen ? router.replace(`${pathname}?${routeIdentifier}`) : router.back();
   };
 
   return (
