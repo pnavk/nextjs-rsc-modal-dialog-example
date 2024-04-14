@@ -13,7 +13,7 @@ export default function Modal({ children, routeName }: ModalProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
-  const isOpen = searchParams.has("show-info");
+  const isOpen = searchParams.has(routeName);
 
   /**
    * We use an effect to update the open state whenever the isOpen prop changes.
@@ -30,7 +30,7 @@ export default function Modal({ children, routeName }: ModalProps) {
       router.replace(pathname, { scroll: false });
     } else {
       //this ensures that the DialogTrigger button works as expected
-      router.replace(`${pathname}?show-info`, { scroll: false });
+      router.replace(`${pathname}?${routeName}`, { scroll: false });
     }
   }
 
