@@ -13,7 +13,7 @@ This code sample use the shadcn/ui [dialog](https://ui.shadcn.com/docs/component
 More details on how it works: www.pranavkhandelwal.com/blog/2024/3/31/toggling-modals-in-nextjs-with-react-server-components. Feedback and PRs welcome.
 
 # Demo:
-![](https://images.squarespace-cdn.com/content/v1/51f6a734e4b04b5d7e666763/6b0f7b75-0b04-4deb-b1e2-aae53ebe6f7b/modal-example+%281%29.gif?format=1500w)
+![](https://images.squarespace-cdn.com/content/v1/51f6a734e4b04b5d7e666763/8b08c46e-7b64-422a-bba7-bcb081efc645/modal-demo.gif?format=2500w)
 
 ## Getting Started
 
