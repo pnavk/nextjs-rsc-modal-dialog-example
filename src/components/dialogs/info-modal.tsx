@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Dialog,
   DialogClose,
   DialogContent,
   DialogDescription,
@@ -11,24 +10,18 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import Modal from "../modal";
+import ModalLink from "../modal-link";
 
-const routeIdentifier = "show-info";
+const RouteIdentifier = "show-info";
 
 export default function InfoModal() {
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const router = useRouter();
-  const isOpen = searchParams.has(routeIdentifier);
-
-  const onOpenChange = (isOpen: boolean) => {
-    isOpen ? router.replace(`${pathname}?${routeIdentifier}`) : router.back();
-  };
-
   return (
-    <Dialog open={isOpen} onOpenChange={onOpenChange}>
+    <Modal routeName={RouteIdentifier}>
       <DialogTrigger asChild>
-        <Button variant="default">Open Dialog</Button>
+        <Button variant="default" asChild>
+          <ModalLink href="?show-info">Open Dialog</ModalLink>
+        </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -43,6 +36,6 @@ export default function InfoModal() {
           </DialogClose>
         </DialogFooter>
       </DialogContent>
-    </Dialog>
+    </Modal>
   );
 }

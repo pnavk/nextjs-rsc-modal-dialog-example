@@ -1,4 +1,4 @@
-import InfoModal from "@/components/InfoModal";
+import InfoModal from "@/components/dialogs/info-modal";
 
 export default function Home() {
   return <InfoModal />;
