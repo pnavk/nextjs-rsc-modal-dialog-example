@@ -7,9 +7,9 @@ export default function NavigationBar() {
     <nav className="py-4 border-b flex">
       <div className="container flex items-center justify-between">
         <Link href="/">Dialog Example</Link>
-        <ModalLink href="?show-info">
-          <Button variant="default">Open Dialog</Button>
-        </ModalLink>
+        <Button variant="default" asChild>
+          <ModalLink href="?show-info">Open Dialog </ModalLink>
+        </Button>
       </div>
     </nav>
   );
