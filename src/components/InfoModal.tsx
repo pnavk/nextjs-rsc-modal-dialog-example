@@ -13,15 +13,16 @@ import {
 import { Button } from "@/components/ui/button";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
+const routeIdentifier = "show-info";
+
 export default function InfoModal() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
-  const isOpen = searchParams.has("show-info");
+  const isOpen = searchParams.has(routeIdentifier);
 
   const onOpenChange = (isOpen: boolean) => {
-    const pathName = isOpen ? `${pathname}?show-info` : pathname;
-    router.push(pathName);
+    isOpen ? router.push(`${pathname}?${routeIdentifier}`) : router.back();
   };
 
   return (
